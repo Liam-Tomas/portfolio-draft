@@ -49,6 +49,7 @@
   @media (max-width: 75em) {
     html {
       font-size: 60%;
+
     }
   }
   
@@ -63,6 +64,16 @@
   @media (max-width: 28.75em) {
     html {
       font-size: 55%;
+    }
+    .whoami {
+        padding: 40px;
+        text-align: center;
+    }
+    .bottom-nav {
+       transform: scale(.7); 
+    }
+    .bottom-nav2 {
+        transform: scale(.7);
     }
   }
   
@@ -81,15 +92,13 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     text-align: center;
+    font-size: 4.2rem;
   }
   
   h1 {
     font-size: 6rem;
   }
   
-  h2 {
-    font-size: 4.2rem;
-  }
   
   ul {
     list-style: none;
@@ -119,7 +128,7 @@
     background-image: linear-gradient(62deg, #35383b 0%, #181719 100%);
     /* background-image: linear-gradient(
         22deg, #181719 0%, var(--main-blue) 100%);*/
-    box-shadow: 0px 1.4px 8px var(--main-red); 
+    box-shadow: 0px 1.4px 5px var(--main-red); 
     z-index: 10;
   }
   
@@ -141,7 +150,7 @@
   
   .nav-list a {
     display: block;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     padding: 2.0rem 1.5rem;
   }
   
@@ -151,6 +160,9 @@
 
   .logo {
    color:var(--main-white);
+   transform: scale(1.2);
+   margin-left: 1.3rem;
+  
   }
   
 .logo-quote {
@@ -164,21 +176,32 @@
     font-size: .8em;
     bottom: 0;
     left: 0;
-    padding: 18px 37px;
+    padding: 10px 37px;
     
 }
 
 .bottom-nav2 {
     color:var(--main-red);
+    display: flex;
+    flex-direction: column;
     position:fixed;
     writing-mode: vertical-rl;
     font-size: .8em;
     bottom: 0;
     right: 0;
-    padding: 18px 37px;
-    
+    padding: 10px 37px;  
 }
 
+
+hr-line {
+ display: flex;
+ flex-direction: column;
+    /* height: 1px; */
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
     
 
   /* Contact Form Button */
@@ -216,6 +239,7 @@
     cursor: pointer;
     backface-visibility: hidden;
     font-size: 40px;
+  
     -webkit-tap-highlight-color:var(--primary-color);
     transition: background 0.15s ease, line-height 0.8s cubic-bezier(0.23, 1, 0.32, 1); }
     .btn-front:hover {
@@ -228,18 +252,20 @@
     width: 100%;
     height: 100%;
     border: 1px solid var(--main-red);
-  
+
     transform: translateZ(-2px) rotateX(180deg);
     overflow: hidden;
     transition: box-shadow 0.8s; }
   
   
   
-  .btn-back h2 {
+  .btn-back p {
     color:var(--slate);
     display: flex;
-    font-size:1.6em;
+    font-size:1.5em;
     margin: 10px 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 100px;
   }
   
   
@@ -287,8 +313,8 @@
       display: flex;
       flex-direction: column;
       text-align: left;
-    height:85%
-     
+    height:85%;
+    
   }
   
   input {
@@ -358,7 +384,7 @@
   .showcase-form .form-control {
     margin-left:20px;
     padding:5px 0px;
-   
+  
     
   }
   
@@ -561,15 +587,26 @@
     justify-content: space-evenly;
     padding: 2rem;
     background: var(--main-gray);
-    border-top: 4px solid var(--main-red);
+    /* border-top: 4px solid var(--main-red); */
+    
+  
+  }
+
+ footer:after {
+    content : "";
+    position: absolute;
+    width: 88%;  /* or 100px */
+    border-bottom:1px solid var(--main-red);
   }
   
   footer > p {
     margin: 2rem;
+    color:var(--main-red)
   }
   
   footer i {
     vertical-align: middle;
+
   }
   
   @media (max-width: 28.75em) {
