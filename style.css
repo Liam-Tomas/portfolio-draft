@@ -146,7 +146,6 @@
   
   .nav {
     display: flex;
-    
     justify-content: space-between;
     position: fixed;
     top: 0;
@@ -163,22 +162,7 @@
     margin-right: 2rem;
     
   }
-  
-  @media (max-width: 48.75em) {
-    .nav {
-      justify-content: center;
 
-    }
-    .bottom-nav {
-      transform: scale(.7); 
-   }
-   .bottom-nav2 {
-       transform: scale(.7);
-   }
-    .nav-list {
-      margin: 0 1rem;
-    }
-  }
   
   .nav-list a {
     display: block;
@@ -236,16 +220,29 @@
     z-index: -1;
 }
 
-/* 
-hr-line {
- display: flex;
- flex-direction: column;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  
+@media (max-width: 48.75em) {
+  .nav {
+    justify-content: center;
+
+  }
+  .bottom-nav {
+    transform: scale(.7); 
+ }
+ .bottom-nav2 {
+     transform: scale(.7);
+ }
+  .nav-list {
+    margin: 0 1rem;
+  }
 }
-   */
+
+/* @media (max-width: 48.75em) {
+  .bottom-nav {
+    transform: scale(.2); 
+  }
+} */
+
 
   /* Welcome section */
   
@@ -268,14 +265,25 @@ hr-line {
     font-weight: bold;
     font-style: italic;
     color: var(--slate);
+    padding:10px;
   }
   
+  @media (max-width: 30.625em) {
+    .welcome-section > p {
+      padding: 40px 50px;
+    }
+  }
+
+  p .whoami {
+    color:red
+  }
+
   /* Projects section */
   
   .projects-section {
     text-align: center;
     padding: 10rem 2rem;
-    background-color: var(--light-navy);
+    background-color: var(--lightest-navy);
     /* border-bottom: 0.1rem solid var(--main-red); */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
     z-index: 10;
@@ -289,7 +297,7 @@ hr-line {
     color: var(--lightest-slate)
     /* border-bottom: 0.1rem solid var(--main-red); */
   }
-  box-shadow: ;
+
   
   @media (max-width: 28.75em) {
     .projects-section-header {
@@ -321,7 +329,6 @@ hr-line {
   .project {
     background: var(--dark-slate);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  
     border-radius: 10px;
   }
   
