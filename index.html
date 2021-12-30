@@ -54,21 +54,22 @@
             <div class="bottom-nav"><p>
                 &copy; Created by
                 <a href="https://www.freecodecamp.com/" target="_blank">
-                    Liam Armstrong</a>
+                    <span>Liam Armstrong→</span></a>
               </p>
             </div> 
 
-            <div class="bottom-nav2">
-                <p>ltarmstrong94@gmail.com</p>
+           <div class="bottom-nav2">
+                <p>ltarmstrong94@gmail.com→</p>
         </div> 
-</section>
+</section>  
   
+
 <!-- END WELCOME SECTION -->
 
 <!-- START PROJECTS SECTION -->
 
 <section id="projects" class="projects-section">
-  <h2 class="projects-section-header">These are some of my projects</h2>
+  <h2 class="projects-section-header">These are some of my <span>projects</span></h2>
 
   <div class="projects-grid">
     <a
@@ -207,7 +208,7 @@
       ><i class="fab fa-twitter"></i> Twitter</a
     >
     <a href="mailto:ltarmtrong94@gmail.com" class="btn2 contact-details"
-      ><i class="fas fa-at"></i> Send a mail</a
+      ><i class="fas fa-at"></i> Email Me</a
     >
     <a href="tel:555-555-5555" class="btn2 contact-details"
       ><i class="fas fa-mobile-alt"></i> Call me</a
@@ -232,52 +233,6 @@
 </footer>
 
 <!-- END FOOTER SECTION -->
-  <script>
-        window.onload = function () {
 
-            var btn = document.querySelector('.btn');
-
-            var btnFront = btn.querySelector('.btn-front'),
-                btnYes = btn.querySelector('.btn-back .yes'),
-                btnNo = btn.querySelector('.btn-back .no');
-
-            btnFront.addEventListener('click', function (event) {
-                var mx = event.clientX - btn.offsetLeft,
-                    my = event.clientY - btn.offsetTop;
-
-                var w = btn.offsetWidth,
-                    h = btn.offsetHeight;
-
-                var directions = [
-                    { id: 'top', x: w / 2, y: 0 },
-                    { id: 'right', x: w, y: h / 2 },
-                    { id: 'bottom', x: w / 2, y: h },
-                    { id: 'left', x: 0, y: h / 2 }
-                ];
-
-                directions.sort(function (a, b) {
-                    return distance(mx, my, a.x, a.y) - distance(mx, my, b.x, b.y);
-                });
-
-                btn.setAttribute('data-direction', directions.shift().id);
-                btn.classList.add('is-open');
-            });
-
-            btnYes.addEventListener('click', function (event) {
-                btn.classList.remove('is-open');
-            });
-
-            btnNo.addEventListener('click', function (event) {
-                btn.classList.remove('is-open');
-            });
-
-            function distance(x1, y1, x2, y2) {
-                var dx = x1 - x2;
-                var dy = y1 - y2;
-                return Math.sqrt(dx * dx + dy * dy);
-            }
-
-        };
-    </script>
 </body>
 </html>

@@ -104,7 +104,9 @@
     font-weight: 400;
     line-height: 1.4;
     color: var(--lightest-slate);
-    background-image: linear-gradient(62deg, #35383b 0%, #181719 100%);
+    background-color: var(--navy);
+    /* background-image: linear-gradient(62deg, #35383b 0%, #181719 100%); */
+
   }
   
   h1,
@@ -120,7 +122,10 @@
     color:var(--lightest-slate)
   }
   
-  
+  span {
+    color:var(--teal);
+}
+
   ul {
     list-style: none;
   }
@@ -133,6 +138,7 @@
   img {
     display: block;
     width: 100%;
+      
     border-radius: 10px;
   }
   
@@ -146,11 +152,7 @@
     top: 0;
     left: 0;
     width: 100%;
-   
     background-color: var(--navy);
-    /* background-image: linear-gradient(62deg, var(--lighter-teal) 0%, var(--white) 100%); */
-    /* background-image: linear-gradient(
-        22deg, #181719 0%, var(--main-blue) 100%);*/
     box-shadow: 0px 0.4px 3px var(--slate); 
     z-index: 10;
     
@@ -165,9 +167,14 @@
   @media (max-width: 48.75em) {
     .nav {
       justify-content: center;
-     
+
     }
-  
+    .bottom-nav {
+      transform: scale(.7); 
+   }
+   .bottom-nav2 {
+       transform: scale(.7);
+   }
     .nav-list {
       margin: 0 1rem;
     }
@@ -214,19 +221,19 @@
     bottom: 0;
     left: 0;
     padding: 10px 30px;
+    z-index: -1;
     
 }
 
 .bottom-nav2 {
     color:var(--slate);
-    display: flex;
-    flex-direction: column;
     position:fixed;
     writing-mode: vertical-rl;
     font-size: .8em;
     bottom: 0;
     right: 0;
     padding: 10px 30px;  
+    z-index: -1;
 }
 
 /* 
@@ -249,7 +256,9 @@ hr-line {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: var(--navy)
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: -10;
     /* border-bottom: 0.1rem solid var(--main-red); */
     
   }
@@ -266,15 +275,18 @@ hr-line {
   .projects-section {
     text-align: center;
     padding: 10rem 2rem;
-    background-color: var(--lightest-navy);
+    background-color: var(--light-navy);
     /* border-bottom: 0.1rem solid var(--main-red); */
-    box-shadow: 1.3px 1.7px 7px var(--dark-bluish);  
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
+    z-index: 10;
+   
 
   }
   
   .projects-section-header {
     max-width: 640px;
-    margin: 0 auto 6rem auto;
+    margin: 0 auto 5.5rem auto;
+    color: var(--lightest-slate)
     /* border-bottom: 0.1rem solid var(--main-red); */
   }
   box-shadow: ;
@@ -307,18 +319,20 @@ hr-line {
   }
   
   .project {
-    background: var(--light-navy);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    background: var(--dark-slate);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  
+    border-radius: 10px;
   }
   
   .code {
-    color: var(--main-gray);
+    color: var(--dark-slate);
     transition: color 0.3s ease-out;
   }
   
   .project:hover .code {
-    color: #ff7f50;
+    /* color: #ff7f50; */
+    color:var(--teal)
   }
   
   .project-image {
@@ -340,12 +354,14 @@ hr-line {
   
   .btn-show-all {
     font-size: 2rem;
-    background: var(--light-navy);
+    background: var(--dark-slate);
     transition: background 0.3s ease-out;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
   
   .btn-show-all:hover {
-    background: var(--teal);
+    background: var(--slate);
   }
   
   .btn-show-all:hover > i {
@@ -370,7 +386,7 @@ hr-line {
     height: 80vh;
     padding: 0 2rem;
     background: var(--navy);
-    box-shadow: 1.3px 1.7px 7px var(--teal); 
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
     color:var(--lightest-slate);
   }
   
@@ -403,6 +419,7 @@ hr-line {
     text-shadow: 2px 2px 1px #1f1f1f;
     transition: transform 0.3s ease-out;
     color:var(--slate)
+    
   }
   
   .contact-details:hover {
@@ -415,8 +432,9 @@ hr-line {
     font-weight: 300;
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem;
-    background: var(--lightest-navy);
+    padding: 1rem;
+    background: var(--light-navy);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
     /* border-top: 4px solid var(--main-red); */
     
   
